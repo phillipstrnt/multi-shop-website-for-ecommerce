@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home-page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Help</a>
+            <a href="#">FAQs</a>
+        </div>
+        <div class="top-bar-right">
+            <div class="dropdown">
+                <button class="dropbtn">My Account ▼</button>
+                <div class="dropdown-content">
+                    <a href="#">Sign In</a>
+                    <a href="#">Sign Up</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">USD ▼</button>
+                <div class="dropdown-content">
+                    <a href="#">EUR</a>
+                    <a href="#">GBP</a>
+                    <a href="#">CAD</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">EN ▼</button>
+                <div class="dropdown-content">
+                    <a href="#">FR</a>
+                    <a href="#">AR</a>
+                    <a href="#">RU</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="middle-bar">
+        <div class="logo">
+            <span class="yellow-bg">MULTI</span><span class="dark-bg">SHOP</span>
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="Search for products">
+            <button class="search-btn">🔍</button>
+        </div>
+        <div class="customer-service">
+            <p class="cs-text">Customer Service</p>
+            <p class="cs-number">+012 345 6789</p>
+        </div>
+    </div>
+
+    <div class="main-nav">
+        <div class="categories-menu">
+            <button class="cat-btn">☰ Categories ▼</button>
+            <div class="cat-content" id="catContent">
+                <div class="nested-dropdown">
+                    <a href="#" class="nested-trigger">Dresses <span style="float:right;">▶</span></a>
+                    <div class="nested-content">
+                        <a href="#">Men's Dresses</a>
+                        <a href="#">Women's Dresses</a>
+                        <a href="#">Baby's Dresses</a>
+                    </div>
+                </div>
+                <a href="#">Shirts</a>
+                <a href="#">Jeans</a>
+                <a href="#">Swimwear</a>
+                <a href="#">Sleepwear</a>
+                <a href="#">Sportswear</a>
+                <a href="#">Jumpsuits</a>
+                <a href="#">Blazers</a>
+                <a href="#">Jackets</a>
+                <a href="#">Shoes</a>
+            </div>
+        </div>
+
+        <div class="nav-links">
+            <a href="#" class="active">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">Shop Detail</a>
+            <a href="#">Shop Cart</a>
+            <a href="#">Checkout</a>
+            <div class="dropdown">
+                <button class="dropbtn-nav">Pages ▼</button>
+                <div class="dropdown-content nav-drop">
+                    <a href="#">About</a>
+                    <a href="#">FAQs</a>
+                    <a href="#">404</a>
+                </div>
+            </div>
+            <a href="#">Contact</a>
+        </div>
+
+        <div class="nav-icons">
+            <span class="icon">❤️ <span class="badge">0</span></span>
+            <span class="icon">🛒 <span class="badge">0</span></span>
+        </div>
+    </div>
+   <section>
+
+    <div class="gallery-container">
+        <div class="carousel-card">
+            <div class="slides-container">
+                <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800');">
+                    <div class="slide-content">
+                        <h2>Kids Fashion</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur elit.</p>
+                        <button class="shop-btn">Shop Now</button>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800');">
+                    <div class="slide-content">
+                        <h2>Men Fashion</h2>
+                        <p>Discover the latest premium trends.</p>
+                        <button class="shop-btn">Shop Now</button>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800');">
+                    <div class="slide-content">
+                        <h2>Women Fashion</h2>
+                        <p>Elevate your everyday style effortlessly.</p>
+                        <button class="shop-btn">Shop Now</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carousel-dots">
+                <span class="dot active" onclick="currentSlide(0)"></span>
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+            </div>
+        </div>
+
+        <div class="promo-column">
+            <div class="promo-card" style="background-image: url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=600');">
+                <div class="promo-content">
+                    <p class="tag">SAVE 20%</p>
+                    <h3>Special Offer</h3>
+                    <button class="shop-btn small">Shop Now</button>
+                </div>
+            </div>
+            <div class="promo-card" style="background-image: url('https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=600');">
+                <div class="promo-content">
+                    <p class="tag">SAVE 20%</p>
+                    <h3>Special Offer</h3>
+                    <button class="shop-btn small">Shop Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ </section>
+
+ <section>
+    <div class="features-container">
+  <div class="feature-card">
+    <div class="icon check-icon">✓</div>
+    <span class="feature-text">Quality Product</span>
+  </div>
+
+  <div class="feature-card">
+    <div class="icon shipping-icon">🚚</div>
+    <span class="feature-text">Free Shipping</span>
+  </div>
+
+  <div class="feature-card">
+    <div class="icon return-icon">⇄</div>
+    <span class="feature-text">14-Day Return</span>
+  </div>
+
+  <div class="feature-card">
+    <div class="icon support-icon">📞</div>
+    <span class="feature-text">24/7 Support</span>
+  </div>
+</div>
+ </section>
+
+
+<section class="categories-section">
+  <h2 class="section-title">CATEGORIES</h2>
+  
+  <div class="categories-grid">
+    <div class="category-card">
+      <div class="card-img">
+        <img src="images/women's fashion2.jpg" alt="Category Image">
+      </div>
+      <div class="card-info">
+        <h3>Category Name</h3>
+        <p>100 Products</p>
+      </div>
+    </div>
+
+    <div class="category-card">
+      <div class="card-img"><img src="/images/women's fashion2.jpg" alt="Category Image"></div>
+      <div class="card-info"><h3>Category Name</h3><p>100 Products</p></div>
+    </div>
+    <div class="category-card">
+      <div class="card-img"><img src="/images/women's fashion3.jpg" alt="Category Image"></div>
+      <div class="card-info"><h3>Category Name</h3><p>100 Products</p></div>
+    </div>
+    <div class="category-card">
+      <div class="card-img"><img src="/images/women's fashion3.jpg" alt="Category Image"></div>
+      <div class="card-info"><h3>Category Name</h3><p>100 Products</p></div>
+    </div>
+    <div class="category-card">
+      <div class="card-img"><img src="/images/women's fashion2.jpg" alt="Category Image"></div>
+      <div class="card-info"><h3>Category Name</h3><p>100 Products</p></div>
+    </div>
+    <div class="category-card">
+      <div class="card-img"><img src="/images/women's fashion2.jpg" alt="Category Image"></div>
+      <div class="card-info"><h3>Category Name</h3><p>100 Products</p></div>
+    </div>
+    <div class="category-card">
+      <div class="card-img"><img src="/images/women's fashion3.jpg" alt="Category Image"></div>
+      <div class="card-info"><h3>Category Name</h3><p>100 Products</p></div>
+    </div>
+    <div class="category-card">
+      <div class="card-img"><img src="/images/kids fashion1.jpg" alt="Category Image"></div>
+      <div class="card-info"><h3>Category Name</h3><p>100 Products</p></div>
+    </div>
+    <div class="category-card">
+      <div class="card-img"><img src="/images/women's fashion3.jpg" alt="Category Image"></div>
+      <div class="card-info"><h3>Category Name</h3><p>100 Products</p></div>
+    </div>
+    <div class="category-card">
+      <div class="card-img"><img src="/images/women's fashion1.jpg" alt="Category Image"></div>
+      <div class="card-info"><h3>Category Name</h3><p>100 Products</p></div>
+    </div>
+    <div class="category-card">
+      <div class="card-img"><img src="/images/women's fashion3.jpg" alt="Category Image"></div>
+      <div class="card-info"><h3>Category Name</h3><p>100 Products</p></div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<div class="featured-section">
+        <h2 class="section-title">Featured Products</h2>
+        
+        <div class="product-grid">
+            
+            <!-- Product Item 1 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <!-- Replace with your image link -->
+                    <img src="images/women's fashion2.jpg" alt="Camera">
+                    
+                    <!-- Hover Action Icons -->
+                    <div class="product-actions">
+                        <a href="#" class="action-btn" title="Add to Cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="#" class="action-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></a>
+                        <a href="#" class="action-btn" title="Quick View"><i class="fa-solid fa-magnifying-glass"></i></a>
+                        <a href="#" class="action-btn" title="Compare"><i class="fa-solid fa-rotate"></i></a>
+                    </div>
+                </div>
+                <h3 class="product-title">Product Name Goes Here</h3>
+                <div class="product-price">
+                    $123.00 <span class="old-price">$129.00</span>
+                </div>
+                <div class="product-rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <span class="rating-count">(99)</span>
+                </div>
+            </div>
+
+            <!-- Product Item 2 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="images/men's fahhion2.jpg" alt="Blue Sweater">
+                    <div class="product-actions">
+                        <a href="#" class="action-btn" title="Add to Cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="#" class="action-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></a>
+                        <a href="#" class="action-btn" title="Quick View"><i class="fa-solid fa-magnifying-glass"></i></a>
+                        <a href="#" class="action-btn" title="Compare"><i class="fa-solid fa-rotate"></i></a>
+                    </div>
+                </div>
+                <h3 class="product-title">Product Name Goes Here</h3>
+                <div class="product-price">
+                    $123.00 <span class="old-price">$129.00</span>
+                </div>
+                <div class="product-rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <span class="rating-count">(99)</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+<section class="featured-products">
+        <!-- <h2>FEATURED PRODUCTS</h2> -->
+        
+        <div class="product-grid">
+            <!-- Product Card 1 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="images/women's fashion2.jpg" alt="Product">
+                    <div class="product-actions">
+                        <button title="Add to Cart"><i class="fa-solid fa-cart-shopping"></i></button>
+                        <button title="Wishlist"><i class="fa-solid fa-heart"></i></button>
+                        <button title="Compare"><i class="fa-solid fa-rotate"></i></button>
+                        <button title="Quick View"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Product Name Goes Here</h3>
+                    <div class="product-price">
+                        <span class="current-price">$123.00</span>
+                        <span class="old-price">$123.00</span>
+                    </div>
+                    <div class="product-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <span class="rating-count">(99)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="images/kid's fashion3.jpg" alt="Product">
+                    <div class="product-actions">
+                        <button title="Add to Cart"><i class="fa-solid fa-cart-shopping"></i></button>
+                        <button title="Wishlist"><i class="fa-solid fa-heart"></i></button>
+                        <button title="Compare"><i class="fa-solid fa-rotate"></i></button>
+                        <button title="Quick View"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Product Name Goes Here</h3>
+                    <div class="product-price">
+                        <span class="current-price">$123.00</span>
+                        <span class="old-price">$123.00</span>
+                    </div>
+                    <div class="product-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span class="rating-count">(99)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="images/women's fashion3.jpg" alt="Product">
+                    <div class="product-actions">
+                        <button title="Add to Cart"><i class="fa-solid fa-cart-shopping"></i></button>
+                        <button title="Wishlist"><i class="fa-solid fa-heart"></i></button>
+                        <button title="Compare"><i class="fa-solid fa-rotate"></i></button>
+                        <button title="Quick View"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Product Name Goes Here</h3>
+                    <div class="product-price">
+                        <span class="current-price">$123.00</span>
+                        <span class="old-price">$123.00</span>
+                    </div>
+                    <div class="product-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <span class="rating-count">(99)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 4 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="images/men's fashion 1.jpg" alt="Product">
+                    <div class="product-actions">
+                        <button title="Add to Cart"><i class="fa-solid fa-cart-shopping"></i></button>
+                        <button title="Wishlist"><i class="fa-solid fa-heart"></i></button>
+                        <button title="Compare"><i class="fa-solid fa-rotate"></i></button>
+                        <button title="Quick View"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Product Name Goes Here</h3>
+                    <div class="product-price">
+                        <span class="current-price">$123.00</span>
+                        <span class="old-price">$123.00</span>
+                    </div>
+                    <div class="product-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <span class="rating-count">(99)</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    
+<script src="script.js"></script>
+</body>
+</html>

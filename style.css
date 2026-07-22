@@ -1,0 +1,921 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+/* --- TOP BAR --- */
+.top-bar {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+.top-bar-left a {
+    color: #666;
+    text-decoration: none;
+    margin-right: 15px;
+}
+.top-bar-left a:hover {
+    color: #ffd333;
+}
+.top-bar-right {
+    display: flex;
+    gap: 15px;
+}
+
+/* Dropdown Base Styling */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropbtn {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    font-size: 14px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+    z-index: 100;
+}
+.dropdown-content a {
+    color: #333;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* --- MIDDLE BAR --- */
+.middle-bar {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+.logo .yellow-bg {
+    background-color: #ffd333;
+    color: #3d464d;
+    padding: 5px 10px;
+}
+.logo .dark-bg {
+    background-color: #3d464d;
+    color: #ffd333;
+    padding: 5px 10px;
+}
+.search-box {
+    display: flex;
+    width: 45%;
+}
+.search-box input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+.search-btn {
+    background-color: #ffd333;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    color: #3d464d;
+}
+.customer-service {
+    text-align: right;
+}
+.cs-text {
+    color: #666;
+    font-size: 13px;
+}
+.cs-number {
+    font-weight: bold;
+    font-size: 18px;
+    color: #3d464d;
+}
+
+/* --- MAIN NAV BAR --- */
+.main-nav {
+    background-color: #3d464d;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    height: 55px;
+}
+
+/* Categories Menu Button */
+.categories-menu {
+    position: relative;
+    width: 250px;
+    height: 100%;
+}
+.cat-btn {
+    background-color: #ffd333;
+    color: #3d464d;
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    padding: 0 20px;
+    cursor: pointer;
+}
+.cat-content {
+    display: none; /* Controlled by JS or change to 'block' if default open */
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+    z-index: 99;
+}
+.cat-content a {
+    color: #333;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #f1f1f1;
+}
+.cat-content a:hover {
+    background-color: #f8f9fa;
+}
+
+/* Nested Dress Flyout on Hover */
+.nested-dropdown {
+    position: relative;
+}
+.nested-content {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: #fff;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+}
+.nested-dropdown:hover .nested-content {
+    display: block;
+}
+
+/* Middle Navigation Links */
+.nav-links {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+.nav-links a, .dropbtn-nav {
+    color: #fff;
+    text-decoration: none;
+    padding: 18px 15px;
+    font-size: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.nav-links a:hover, .dropbtn-nav:hover, .active {
+    color: #ffd333 !important;
+}
+
+/* Pages Dropdown adjustment */
+.nav-drop {
+    top: 53px;
+    left: 0;
+    background-color: #ffd333;
+}
+.nav-drop a {
+    color: #3d464d !important;
+    padding: 10px 20px;
+}
+.nav-drop a:hover {
+    background-color: #f5f5f5;
+}
+
+/* Nav Right Icons */
+.nav-icons {
+    margin-left: auto;
+    color: #ffd333;
+    display: flex;
+    gap: 15px;
+}
+.icon {
+    position: relative;
+    cursor: pointer;
+    font-size: 18px;
+}
+.badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: #fff;
+    color: #3d464d;
+    font-size: 11px;
+    padding: 2px 5px;
+    border-radius: 50%;
+    border: 1px solid #3d464d;
+}
+
+
+
+
+
+/* RESPONSIVENESS ON SMALLER SCREENS */
+/* --- RESPONSIVE MEDIA QUERIES (Tablets and Mobiles) --- */
+@media (max-width: 992px) {
+    
+    /* 1. Top Bar: Stack items vertically and center them */
+    .top-bar {
+        padding: 10px 15px;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .top-bar-left, .top-bar-right {
+        justify-content: center;
+        width: 100%;
+        gap: 15px;
+    }
+
+    /* 2. Middle Bar: Stack Logo, Search Bar, and Service Number */
+    .middle-bar {
+        flex-direction: column;
+        padding: 20px 15px;
+        gap: 20px;
+        text-align: center;
+    }
+    .search-box {
+        width: 100%; /* Spans full width on small screens */
+    }
+    .customer-service {
+        text-align: center;
+    }
+
+    /* 3. Main Nav Bar: Change layout to a fluid vertical stack */
+    .main-nav {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 15px;
+        gap: 10px;
+    }
+
+    /* 4. Categories Menu: Spans full width */
+    .categories-menu {
+        width: 100%;
+    }
+    .cat-btn {
+        padding: 12px 15px;
+        border-radius: 4px;
+    }
+    .cat-content {
+        position: static; /* Forces menu to push underlying content down instead of overlapping */
+        box-shadow: none;
+        border: 1px solid #ddd;
+        margin-top: 5px;
+    }
+
+    /* 5. Submenus (Dresses Flyout): Accordion-style layout for touch screens */
+    .nested-content {
+        position: static; /* Disables the right-side popout */
+        width: 100%;
+        background-color: #f9f9f9;
+        box-shadow: none;
+        padding-left: 20px; /* Indents nested options */
+    }
+    .nested-dropdown:hover .nested-content {
+        display: block;
+    }
+
+    /* 6. Navigation Links Block */
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        margin-left: 0;
+        display: none; /* Hidden by default on mobile; toggled via JS */
+        background-color: #444e56;
+        border-radius: 4px;
+    }
+    
+    /* Class added via JavaScript when mobile hamburger icon is tapped */
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links a, .dropbtn-nav {
+        width: 100%;
+        padding: 12px 15px;
+        border-bottom: 1px solid #55616b;
+        text-align: left;
+    }
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
+
+    /* 7. Pages Dropdown on Mobile */
+    .nav-drop {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        background-color: #ffd333;
+    }
+
+    /* 8. Utility Icons (Heart/Cart): Centered at the bottom of the nav stack */
+    .nav-icons {
+        margin: 10px auto;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+body {
+    background-color: #f8f9fa;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* min-height: 100vh; */
+    /* padding: 20px 20px; */
+    /* margin: 5px; */
+}
+
+/* 1. Main Grid Setup */
+.gallery-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Left section is twice as wide */
+    gap: 20px;
+    /* max-width: 1200px; */
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: 1fr; /* Stack vertically on small screens */
+    }
+}
+
+/* 2. Carousel Component Structural Styles */
+.carousel-card {
+    position: relative;
+    height: 450px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.slides-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+/* Slide Text/Button Overlay Styling */
+.slide-content, .promo-content {
+    background: rgba(0, 0, 0, 0.4); /* Dark shade to improve text readability */
+    color: white;
+    padding: 25px;
+    max-width: 400px;
+    border-radius: 4px;
+    backdrop-filter: blur(2px);
+    z-index: 2;
+}
+
+.slide-content h2 { font-size: 2.5rem; margin-bottom: 10px; }
+.shop-btn {
+    margin-top: 15px;
+    padding: 10px 25px;
+    background-color: #ffc107;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.shop-btn:hover { background-color: #181712;color: #f8f9fa; }
+
+/* Navigation Indicator Dots Placement */
+.carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #ffffff;
+    transform: scale(1.2);
+}
+
+/* 3. Promo Column Layout and Hover Zoom Transitions */
+.promo-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 450px;
+}
+
+.promo-card {
+    flex: 1;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    
+    /* Crucial trick for background image transition zoom: */
+    transition: transform 0.4s ease; 
+}
+
+/* Background pseudo-element to isolate zoom scale effects without messing with text */
+.promo-card::before {
+    content: '';
+    position: absolute;
+    top:0; left:0; width:100%; height:100%;
+    background-image: inherit;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+    z-index: 0;
+}
+
+.promo-card:hover::before {
+    transform: scale(1.1); /* Zooms image inside without overflowing container */
+}
+
+.promo-content {
+    position: relative;
+    z-index: 1;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.85);
+    color: #333;
+}
+.promo-content .tag { color: #e63946; font-weight: bold; font-size: 0.85rem;}
+.promo-content h3 { margin: 5px 0; font-size: 1.3rem; }
+.shop-btn.small { padding: 6px 15px; font-size: 0.85rem; margin-top: 5px; }
+
+/* Container using CSS Grid */
+.features-container {
+  display: grid;
+  /* Creates 4 equal columns. Auto-fit ensures it drops to next line on smaller screens */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 30px;
+  background-color: #f8f9fa; /* Light background like the website */
+  font-family: sans-serif;
+}
+
+/* Individual Card Styling */
+.feature-card {
+  background-color: #ffffff;
+  padding: 25px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px; /* Space between icon and text */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Soft shadow */
+  border-radius: 4px;
+}
+
+/* Icon Styles (Matching the golden yellow theme) */
+.icon {
+  color: #ffd333; /* Golden yellow color from the site theme */
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Text Styles */
+.feature-text {
+  color: #3d464d; /* Dark gray text */
+  font-weight: 600;
+  font-size: 16px;
+}
+
+
+
+
+
+
+
+
+/* Overall Section Styling */
+.categories-section {
+  font-family: Arial, sans-serif;
+  padding: 40px 20px;
+  background-color: #f8f9fa;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+/* CSS Grid for the 12 Cards */
+.categories-grid {
+  display: grid;
+  /* repeat(4, 1fr) splits the row into 4 identical, equal columns */
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px; /* Space between rows and columns */
+}
+
+/* Individual Card Styling */
+.category-card {
+  background-color: #ffffff;
+  display: flex;       /* Aligns image and text side-by-side */
+  align-items: center; /* Centers items vertically */
+  padding: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out; /* Smooth color change */
+}
+
+/* Styling for the image area */
+.card-img img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain; /* Prevents stretching */
+  margin-right: 20px;
+}
+
+/* Styling for the text info */
+.card-info h3 {
+  font-size: 16px;
+  margin: 0 0 5px 0;
+  color: #333;
+}
+
+.card-info p {
+  font-size: 14px;
+  margin: 0;
+  color: #777;
+}
+
+/* Hover & Active/Selected states */
+.category-card:hover, 
+.category-card.active {
+  background-color: #ffd333; /* The signature gold color from the video */
+}
+
+/* Responsive adjustment for tablets/mobiles */
+@media (max-width: 992px) {
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
+}
+@media (max-width: 576px) {
+  .categories-grid {
+    grid-template-columns: 1fr; /* 1 column on mobile phones */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+        .featured-section {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #222;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Grid Layout */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        /* Product Card */
+        .product-card {
+            background-color: #ffffff;
+            border: 1px solid #e5e5e5;
+            padding: 15px;
+            position: relative;
+            text-align: center;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Image Container & Hover Overlay */
+        .product-image-container {
+            position: relative;
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        /* Action Icons Overlay (Hidden by default) */
+        .product-actions {
+            position: absolute;
+            bottom: -50px; /* Hidden below the image boundary */
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            transition: bottom 0.3s ease;
+        }
+
+        /* Reveal icons on hover over the image container */
+        .product-image-container:hover .product-actions {
+            bottom: 15px; /* Slides up into view */
+        }
+
+        .action-btn {
+            background-color: #ffffff;
+            color: #333;
+            border: 1px solid #ddd;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 14px;
+            transition: background-color 0.2s, color 0.2s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* Hover effect for individual action buttons */
+        .action-btn:hover {
+            background-color: #333;
+            color: #fff;
+            border-color: #333;
+        }
+
+        /* Product Details */
+        .product-title {
+            font-size: 15px;
+            color: #444;
+            margin: 15px 0 8px;
+        }
+
+        .product-price {
+            font-size: 16px;
+            font-weight: bold;
+            color: #222;
+            margin-bottom: 8px;
+        }
+
+        .product-price .old-price {
+            font-size: 14px;
+            font-weight: normal;
+            color: #999;
+            text-decoration: line-through;
+            margin-left: 8px;
+        }
+
+        /* Star Ratings */
+        .product-rating {
+            color: #ffc107; /* Gold color for filled stars */
+            font-size: 13px;
+        }
+
+        .product-rating .far {
+            color: #ccc; /* Grey color for empty stars if any */
+        }
+
+        .rating-count {
+            color: #888;
+            font-size: 12px;
+            margin-left: 4px;
+        }
+
+
+
+
+
+
+
+        .featured-products {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.featured-products h2 {
+    font-size: 24px;
+    letter-spacing: 1px;
+    color: #333;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Grid System */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Product Card */
+.product-card {
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+    transition: box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Container & Hover Overlay Effect */
+.product-image-container {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    background-color: #f4f4f4;
+}
+
+.product-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Zoom effect on image */
+.product-card:hover .product-image-container img {
+    transform: scale(1.05);
+}
+
+/* Action Buttons (Cart, Wishlist, Compare, Search) */
+.product-actions {
+    position: absolute;
+    bottom: -50px; /* Hidden initially below the image container */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+    transition: bottom 0.3s ease;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 5px;
+    border-radius: 4px;
+}
+
+/* Reveal action buttons on hover */
+.product-image-container:hover .product-actions {
+    bottom: 15px; 
+}
+
+.product-actions button {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    transition: background 0.2s, color 0.2s;
+}
+
+.product-actions button:hover {
+    background-color: #333;
+    color: #fff;
+    border-color: #333;
+}
+
+/* Product Information */
+.product-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.product-title {
+    font-size: 14px;
+    color: #333;
+    margin: 0 0 10px 0;
+    font-weight: normal;
+}
+
+/* Pricing Styling */
+.product-price {
+    margin-bottom: 8px;
+}
+
+.current-price {
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+    margin-right: 8px;
+}
+
+.old-price {
+    font-size: 13px;
+    color: #999;
+    text-decoration: line-through;
+}
+
+/* Star Ratings */
+.product-rating {
+    color: #ffc107; /* Gold color for filled stars */
+    font-size: 12px;
+}
+
+.product-rating .fa-regular {
+    color: #ccc; /* Grey color for empty stars */
+}
+
+.rating-count {
+    color: #777;
+    margin-left: 5px;
+}
