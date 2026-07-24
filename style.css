@@ -781,7 +781,7 @@ body {
 
 
 
-        .featured-products {
+.featured-products {
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -918,4 +918,182 @@ body {
 .rating-count {
     color: #777;
     margin-left: 5px;
+}
+
+
+
+
+
+
+
+
+/* footer styling */
+.footer {
+  background-color: #354f52; /* Dark slate grey theme color */
+  color: #adb5bd;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  padding-top: 60px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  padding: 0 20px 40px 20px;
+}
+
+.footer-col h3 {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.footer-col p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.footer-col i {
+  color: #ffc107; /* Yellow accent for icons */
+  margin-right: 8px;
+}
+
+/* Quick Shop & My Account Links */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #adb5bd;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+.footer-links i {
+  font-size: 11px;
+  margin-right: 5px;
+}
+
+/* Newsletter Section */
+.newsletter-form {
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  background: #ffffff;
+  color: #333;
+}
+
+.newsletter-form button {
+  background-color: #ffc107; /* Yellow button */
+  color: #212529;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.newsletter-form button:hover {
+  background-color: #e0a800;
+}
+
+.follow-heading {
+  margin-top: 20px;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 5px;
+}
+
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  background-color: #ffc107;
+  color: #212529;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.social-icons a:hover {
+  opacity: 0.85;
+}
+
+.social-icons i {
+  color: #212529;
+  margin: 0;
+}
+
+/* Footer Bottom Bar */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px 0;
+  background-color: #2f4345;
+}
+
+.bottom-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.footer-bottom a {
+  color: #ffc107;
+  text-decoration: none;
+}
+
+.payment-icons {
+  display: flex;
+  gap: 8px;
+}
+
+.pay-badge {
+  background: #fff;
+  color: #333;
+  padding: 2px 6px;
+  font-size: 11px;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .bottom-flex {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
 }
