@@ -108,6 +108,57 @@
 
 
 
+    <div class="container">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            Home / Shop / <span>Shopping Cart</span>
+        </div>
+
+        <div class="cart-layout">
+            <!-- Cart Table Section -->
+            <div class="cart-table-container">
+                <table class="cart-table">
+                    <thead>
+                        <tr>
+                            <th>Products</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                            <th>Remove</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-items">
+                        <!-- Dynamic rows will be inserted here by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Cart Summary Section -->
+            <div class="cart-summary">
+                <div class="coupon-section">
+                    <input type="text" placeholder="Coupon Code" id="coupon-input">
+                    <button id="apply-coupon">Apply Coupon</button>
+                </div>
+
+                <h3>CART SUMMARY</h3>
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="subtotal">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span id="shipping">$10.00</span>
+                </div>
+                <div class="summary-row total-row">
+                    <span>Total</span>
+                    <span id="final-total">$0.00</span>
+                </div>
+                <button class="checkout-btn">Proceed To Checkout</button>
+            </div>
+        </div>
+    </div>
+
+
 
     <!-- footer -->
 <footer class="footer">
